@@ -1,0 +1,16 @@
+{
+  "name": "interview-preparation",
+  "version": "1.0.0",
+  "author": "Ziyu Chen",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha ./**/spec.js"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.0.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}
