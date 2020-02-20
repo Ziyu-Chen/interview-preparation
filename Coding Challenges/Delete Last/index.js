@@ -7,9 +7,13 @@ Write a function that can remove the last character specified by the second argu
 */
 
 const deleteLast = (str = "", char = "") => {
-  let i = str.length - 1;
-  while (i >= 0 && str[i] !== char) i--;
-  return i === -1 ? str : str.slice(0, i) + str.slice(i + 1);
+  if (typeof str === "string" && typeof char === "string") {
+    let i = str.length - 1;
+    while (i >= 0 && str[i] !== char) i--;
+    return i === -1 ? str : str.slice(0, i) + str.slice(i + 1);
+  } else {
+    return str;
+  }
 };
 
 module.exports = { deleteLast };
