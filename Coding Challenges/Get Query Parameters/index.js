@@ -6,6 +6,10 @@ Wirte a function for accessing the query parameters in a url string
 写一个获取当前url查询字符串中的参数的方法
 */
 
+/*
+Query parameters can also be accessed using window.location.search.
+*/
+
 const getQueryParameters = (url = "") => {
   const result = {};
   const qi = url.indexOf("?");
@@ -13,9 +17,9 @@ const getQueryParameters = (url = "") => {
   url
     .slice(qi + 1)
     .split("&")
-    .forEach(pairStr => {
-      const pair = pairStr.split("=");
-      result[pair[0]] = pair[1];
+    .forEach(pair => {
+      const [key, value] = pair.split("=");
+      result[key] = value;
     });
   return result;
 };
