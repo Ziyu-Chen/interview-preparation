@@ -67,11 +67,11 @@ const isChineseID = (ID = "") => {
   const arr = ["1", "0", "X", "9", "8", "7", "6", "5", "4", "3", "2"];
   const values = ID.slice(0, 17).split("");
   const weights = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2];
-  const mod =
+  const remainder =
     _.zip(values, weights)
       .map(item => Number(item[0]) * item[1])
       .reduce((a, b) => a + b) % 11;
-  if (ID[ID.length - 1] !== arr[mod]) return false;
+  if (ID[ID.length - 1] !== arr[remainder]) return false;
   return true;
 };
 

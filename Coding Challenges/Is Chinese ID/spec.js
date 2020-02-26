@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { isChineseID } = require(".");
 
-describe.only("getQueryParameters", () => {
+describe("getQueryParameters", () => {
   it("should return a boolean", () => {
     expect(typeof isChineseID()).to.eql("boolean");
   });
