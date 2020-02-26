@@ -1,5 +1,3 @@
-// [5, 3, 9, 7, 2, 1, 4, 8, 10, 6];
-
 const quickSort = (arr = []) => {
   if (arr.length <= 1) return arr;
   if (arr.length === 2) return arr[0] <= arr[1] ? arr : [arr[1], arr[0]];
@@ -15,7 +13,6 @@ const quickSort = (arr = []) => {
       j--;
     }
   }
-  // console.log(quickSort(arr.slice(0, i + 1)))
   return arr[i] <= threshold
     ? [
         ...quickSort(arr.slice(0, i + 1)),
