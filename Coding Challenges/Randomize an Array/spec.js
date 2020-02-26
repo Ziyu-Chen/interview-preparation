@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { randomize } = require(".");
 
-describe.only("randomize", () => {
+describe("randomize", () => {
   it("should return a array", () => {
     expect(Array.isArray(randomize())).to.be.true;
   });
