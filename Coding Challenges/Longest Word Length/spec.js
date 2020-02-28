@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { longestWordLength } = require(".");
 
-describe.only("longestWordLength", () => {
+describe("longestWordLength", () => {
   it("should return a number", () => {
     expect(typeof longestWordLength()).to.eql("number");
   });
