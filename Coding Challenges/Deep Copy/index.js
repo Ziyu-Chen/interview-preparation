@@ -15,7 +15,8 @@ const deepCopy = obj => {
       newObj[key] = deepCopy(obj[key]);
     }
     return newObj;
-  } else return obj;
+  }
+  return obj;
 };
 
 module.exports = { deepCopy };
