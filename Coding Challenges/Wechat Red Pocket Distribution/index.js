@@ -16,7 +16,7 @@ When createRedPockets is called, an array of red pockets (positive numbers) will
 The function returns a red pocket when there are still red pockets (positive numbers) left in the array. Otherwise it returns 0.
 */
 
-const createRedPockets = (total, num, random = false) => {
+const createRedPockets = (total, num = 1, random = false) => {
   let redPockets;
   if (random) {
     let weights = [];
