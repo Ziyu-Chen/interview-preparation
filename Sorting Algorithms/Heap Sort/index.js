@@ -82,7 +82,6 @@ const heapSort = (arr = []) => {
   const result = [];
   arr.forEach(num => heap.insert(num));
   for (let i = 0; i < arr.length; i++) result.push(heap.removeMin());
-
   return result;
 };
 

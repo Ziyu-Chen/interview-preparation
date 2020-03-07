@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { Heap, heapSort } = require(".");
 
-describe.only("Heaps", () => {
+describe("Heaps", () => {
   let heap;
   beforeEach(() => {
     heap = new Heap();
@@ -58,7 +58,7 @@ describe.only("Heaps", () => {
   });
 });
 
-describe.only("heapSort", () => {
+describe("heapSort", () => {
   it("should return an array", () => {
     expect(Array.isArray(heapSort())).to.eql(true);
   });
