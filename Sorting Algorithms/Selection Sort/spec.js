@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { selectionSort } = require(".");
 
-describe.only("selectionSort", () => {
+describe("selectionSort", () => {
   it("should return an array", () => {
     expect(Array.isArray(selectionSort())).to.eql(true);
   });
