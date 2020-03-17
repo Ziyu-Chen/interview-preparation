@@ -23,8 +23,8 @@ Step 5: Return the object
 const newNew = Obj => {
   return (...args) => {
     const obj = Object.create(Obj.prototype); // Step 1 & 2
-    const obj1 = Obj.apply(obj, args); // Step 3
-    return obj1 instanceof Object ? obj1 : obj;
+    const obj1 = Obj.apply(obj, args); // Step 3 & 4
+    return obj1 instanceof Object ? obj1 : obj; // Step 5
   };
 };
 
