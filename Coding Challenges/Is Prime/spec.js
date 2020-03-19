@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { isPrime, isPrimeCreator } = require(".");
 
-describe.only("isPrime", () => {
+describe("isPrime", () => {
   it("should return a boolean", () => {
     expect(isPrime()).to.be.false;
   });
@@ -23,7 +23,7 @@ describe.only("isPrime", () => {
   });
 });
 
-describe.only("isPrimeCreator", () => {
+describe("isPrimeCreator", () => {
   it("should return a function", () => {
     const isPrime2 = isPrimeCreator();
     expect(typeof isPrime2).to.eql("function");
